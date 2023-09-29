@@ -40,6 +40,3 @@ GIF created with ScreenToGif
 ## Notes
 
 Minor issues with layout and figuring out how to change the API code from the lab to adapt to the project.
-
-    See the License for the specific language governing permissions and
-    limitations under the License.
