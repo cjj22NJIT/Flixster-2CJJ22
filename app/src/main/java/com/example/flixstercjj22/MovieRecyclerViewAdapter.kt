@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.flixstercjj22.R.id
+import android.content.Context
+import android.content.Intent
 
 
 
@@ -35,6 +37,7 @@ class MovieRecyclerViewAdapter (
             override fun toString(): String {
                 return mMovieTitle.toString()
             }
+
         }
 
         override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
@@ -61,5 +64,7 @@ class MovieRecyclerViewAdapter (
         override fun getItemCount(): Int {
             return movies.size
         }
+
+
 
     }

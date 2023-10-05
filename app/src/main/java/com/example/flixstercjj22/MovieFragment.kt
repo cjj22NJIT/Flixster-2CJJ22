@@ -49,7 +49,7 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
         // Using the client, perform the HTTP request
         client[
             // if there's a flub, consider how this works.
-            "https://api.themoviedb.org/3/movie/now_playing",
+            "https://api.themoviedb.org/3/movie/upcoming",
             params,
             object : JsonHttpResponseHandler()
 
