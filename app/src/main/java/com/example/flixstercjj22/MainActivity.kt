@@ -1,7 +1,7 @@
 package com.example.flixstercjj22
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.flixstercjj22.R.id
 
 class MainActivity : AppCompatActivity() {
@@ -12,5 +12,8 @@ class MainActivity : AppCompatActivity() {
         val supportFragmentManager = supportFragmentManager
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(id.content, MovieFragment(), null).commit()
+
+
+
     }
 }

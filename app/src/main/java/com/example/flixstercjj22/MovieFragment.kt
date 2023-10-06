@@ -1,11 +1,11 @@
 package com.example.flixstercjj22
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.widget.ContentLoadingProgressBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -16,7 +16,6 @@ import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.Headers
-import org.json.JSONObject
 
 private const val API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
 
@@ -44,6 +43,7 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
         val client = AsyncHttpClient()
         val params = RequestParams()
         params["api_key"] = API_KEY
+        params["region"] = "US"
 
 
         // Using the client, perform the HTTP request
@@ -108,6 +108,14 @@ class MovieFragment : Fragment(), OnListFragmentInteractionListener {
 
 
     override fun onItemClick(item: Movie) {
-        Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
+        //Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
+        val intent = Intent(context, DetailActivity::class.java)
+        intent.putExtra("release_date",item.releasedate)
+        intent.putExtra("title",item.title)
+        intent.putExtra("popularity",item.popularity)
+        intent.putExtra("vote_average",item.voteAverage)
+        intent.putExtra("overview",item.overview)
+        intent.putExtra("poster_path",item.posterPath)
+        startActivity(intent)
     }
 }

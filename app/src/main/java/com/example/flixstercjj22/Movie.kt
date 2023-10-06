@@ -17,6 +17,10 @@ class Movie {
     @SerializedName("release_date")
     var releasedate: String? = null
 
+    @SerializedName("popularity")
+    var popularity: String? = null
 
+    @SerializedName("vote_average")
+    var voteAverage: String? = null
 
 }
